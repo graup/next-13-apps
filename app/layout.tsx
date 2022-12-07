@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import './globals.css'
+import { someStyle } from './styles.css';
 
 export default function RootLayout({
   children,
@@ -12,7 +13,7 @@ export default function RootLayout({
     <html lang="en">
       <head />
       <body>
-        <em><Link href="/">Index</Link> layout {JSON.stringify(params, null, 2)}</em>
+        <em><Link href="/">Index</Link> layout {JSON.stringify(params, null, 2)} <span className={someStyle}>hello</span></em>
         <div className="layout" style={{ border: '10px solid #eee' }}>
           {children}
         </div>
